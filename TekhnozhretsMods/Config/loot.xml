@@ -1,0 +1,9 @@
+<configs>
+    <!-- Add foodWhatAFishRaw -->
+    <append xpath="/lootcontainers/lootgroup[@name='groupDumpsterFood']">
+        <item name="foodWhatAFishRaw" count="0,10"  loot_prob_template="med"/>
+    </append>
+    <append xpath="/lootcontainers/lootgroup[@name='groupIngredientsRare']">
+        <item name="foodWhatAFishRaw" count="1,5"  loot_prob_template="med"/>
+    </append>
+</configs>

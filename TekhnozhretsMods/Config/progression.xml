@@ -1,0 +1,51 @@
+<configs>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']">
+		<!-- Tier 1 Unlocks (Levels 2-10) -->
+		<display_entry icon="foodFishFritters,foodFriedFishWithYucca" name_key="foodT1-1,foodT1-2" has_quality="false" unlock_level="2,4">
+			<unlock_entry item="foodFishFritters" unlock_tier="1"/>
+			<unlock_entry item="foodFriedFishWithYucca" unlock_tier="2"/>
+		</display_entry>
+
+		<!-- Tier 2 Unlocks (Levels 11-25) -->
+		<display_entry icon="foodFishMushroomSoup,foodFishSandwich" name_key="foodT2-1,foodT2-2" has_quality="false" unlock_level="11,13">
+			<unlock_entry item="foodFishMushroomSoup" unlock_tier="1"/>
+			<unlock_entry item="foodFishSandwich" unlock_tier="2"/>
+		</display_entry>
+
+		<!-- Tier 3 Unlocks (Levels 26-40) -->
+		<display_entry icon="foodFishPotatoPie,foodSmokedFishInSauce" name_key="foodT3-1,foodT3-2" has_quality="false" unlock_level="26,30">
+			<unlock_entry item="foodFishPotatoPie" unlock_tier="1"/>
+			<unlock_entry item="foodSmokedFishInSauce" unlock_tier="2"/>
+		</display_entry>
+
+		<!-- Tier 4 Unlocks (Levels 41-60) -->
+		<display_entry icon="foodBakedFishAndPotatoes,foodFishStewWithCorn" name_key="foodT4-1,foodT4-2" has_quality="false" unlock_level="41,45">
+			<unlock_entry item="foodBakedFishAndPotatoes" unlock_tier="1"/>
+			<unlock_entry item="foodFishStewWithCorn" unlock_tier="2"/>
+		</display_entry>
+
+		<!-- Tier 5 Unlocks (Levels 61-100) -->
+		<display_entry icon="foodFishBraisedInOwnJuices,foodFishTacosDeluxe" name_key="foodT5-1,foodT5-2" has_quality="false" unlock_level="61,70">
+			<unlock_entry item="foodFishBraisedInOwnJuices" unlock_tier="1"/>
+			<unlock_entry item="foodFishTacosDeluxe" unlock_tier="2"/>
+		</display_entry>
+
+		<effect_group>
+			<!-- Tier 1 Unlocks -->
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="foodFishFritters"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,100" value="1" tags="foodFriedFishWithYucca"/>
+			<!-- Tier 2 Unlocks -->
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="foodFishMushroomSoup"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="13,100" value="1" tags="foodFishSandwich"/>
+			<!-- Tier 3 Unlocks -->
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="foodFishPotatoPie"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="foodSmokedFishInSauce"/>
+			<!-- Tier 4 Unlocks -->
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="41,100" value="1" tags="foodBakedFishAndPotatoes"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,100" value="1" tags="foodFishStewWithCorn"/>
+			<!-- Tier 5 Unlocks -->
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="foodFishBraisedInOwnJuices"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="foodFishTacosDeluxe"/>
+		</effect_group>
+	</append>
+</configs>

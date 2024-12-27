@@ -1,0 +1,370 @@
+<configs>
+    <append xpath="/recipes">
+
+        <!-- Рецепт воды из снега -->
+        <recipe
+			name="drinkJarBoiledWater" 
+			count="1" 
+			craft_area="campfire"
+			craft_tool="toolCookingPot"
+			tags="perkMasterChef,perkChefBoiledWater,boiledWater"
+			always_unlocked="true"
+			craft_exp_gain="50"
+		>
+            <ingredient name="resourceSnowBall" count="3"/>
+            <effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="30"/>
+            </effect_group>
+            <craft_time time="30"/>
+            <item name="drinkJarBoiledWater" />
+        </recipe>
+
+        <!-- Рецепт очистки воды из ведра -->
+        <recipe
+			name="drinkJarBoiledWater" 
+			count="5"
+			craft_area="campfire"
+			craft_tool="toolCookingPot"
+			tags="perkMasterChef,perkChefBoiledWater,boiledWater"
+			always_unlocked="true"
+			craft_exp_gain="100"
+		>
+            <ingredient name="bucketRiverWater" count="1"/>
+            <ingredient name="resourceCrushedSand" count="5"/>
+            <ingredient name="resourceYuccaFibers" count="10"/>
+            <ingredient name="resourceCloth" count="2"/>
+            <effect_group>
+                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="60"/>
+            </effect_group>
+            <craft_time time="60"/>
+            <item name="drinkJarBoiledWater" />
+        </recipe>
+
+        <!-- Рецепт очистки воды из кактусов и травы -->
+        <recipe
+			name="drinkJarBoiledWater" 
+			count="1"
+			craft_area="campfire"
+			craft_tool="toolCookingPot"
+			tags="perkMasterChef,perkChefBoiledWater,boiledWater"
+			always_unlocked="true"
+			craft_exp_gain="200"
+		>
+            <ingredient name="resourceCrushedSand" count="5"/>
+            <ingredient name="resourceYuccaFibers" count="200"/>
+            <ingredient name="resourceCloth" count="2"/>
+            <effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="360"/>
+            </effect_group>
+            <craft_time time="360"/>
+            <item name="drinkJarBoiledWater" />
+        </recipe>
+		
+		<!-- Тигель -->
+		<recipe
+			name="toolForgeCrucible"
+			count="1"
+			craft_area="workbench"
+			always_unlocked="true"
+			craft_exp_gain="300"
+		>
+			<ingredient name="resourceClayLump" count="100" />
+			<ingredient name="resourceRockSmall" count="200" />
+			<ingredient name="resourceForgedIron" count="50" />
+			<effect_group>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="600"/>
+			</effect_group>
+			<craft_time time="600" />
+			<item name="toolForgeCrucible" />
+		</recipe>
+		
+		<!-- Травяной отвар -->
+		<recipe
+			name="drinkHerbalDecoction"
+			count="1"
+			craft_area="campfire"
+			craft_tool="toolCookingPot"
+			always_unlocked="true"
+			craft_exp_gain="300"
+		>
+            <ingredient name="resourceCropGoldenrodPlant" count="10"/>
+            <ingredient name="resourceCropChrysanthemumPlant" count="10"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="foodCropBlueberries" count="2"/>
+			<effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="300"/>
+				<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-2,-4" tags="resourceCropGoldenrodPlant"/>
+				<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-2,-4" tags="resourceCropChrysanthemumPlant"/>
+				<passive_effect name="CraftingIngredientCount" level="3" operation="base_add" value="-1" tags="foodCropBlueberries"/>
+            </effect_group>
+            <craft_time time="300"/>
+            <item name="drinkHerbalDecoction"/>
+        </recipe>
+		
+		<!-- Мясной бульон -->
+		<recipe
+			name="drinkMeatBroth"
+			count="5"
+			craft_area="campfire"
+			craft_tool="toolCookingPot"
+			always_unlocked="true"
+			craft_exp_gain="500"
+		>
+            <ingredient name="drinkJarBoiledWater" count="10"/>
+			<ingredient name="foodRawMeat" count="50"/>
+			<effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="300"/>
+				<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-3" tags="drinkJarBoiledWater"/>
+				<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-10,-20" tags="foodRawMeat"/>
+            </effect_group>
+            <craft_time time="900"/>
+            <item name="drinkMeatBroth"/>
+        </recipe>
+		
+		<!-- Копчёная рыба -->
+		<recipe
+			name="foodWhatAFishSmoked"
+			count="1"
+			craft_area="campfire"
+			craft_tool="toolCookingPot"
+			always_unlocked="true"
+			craft_exp_gain="500"
+		>
+            <ingredient name="treePlantedMountainPine1m" count="8"/>
+            <ingredient name="resourceWood" count="8"/>
+			<ingredient name="foodWhatAFishRaw" count="10"/>
+			<effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="300"/>
+            </effect_group>
+            <craft_time time="900"/>
+            <item name="foodWhatAFishSmoked"/>
+        </recipe>
+		
+		<!-- Набор для шитья -->
+		<recipe
+			name="resourceSewingKit"
+			count="1"
+			craft_area="workbench"
+			always_unlocked="true"
+			craft_exp_gain="300"
+		>
+            <ingredient name="resourceScrapIron" count="1"/>
+            <ingredient name="resourceCropCottonPlant" count="20"/>
+			<effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="300"/>
+            </effect_group>
+            <craft_time time="600"/>
+            <item name="resourceSewingKit"/>
+        </recipe>
+		
+		<!-- Удочка -->
+		<recipe
+			name="toolBadFishingRod"
+			count="1"
+			always_unlocked="true"
+			craft_exp_gain="300"
+		>
+            <ingredient name="resourceScrapIron" count="10"/>
+            <ingredient name="resourceSewingKit" count="5"/>
+			<effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="300"/>
+            </effect_group>
+            <craft_time time="600"/>
+            <item name="toolBadFishingRod"/>
+        </recipe>
+		
+		<!-- Наживка -->
+		<recipe
+			name="foodWhatABait"
+			count="2"
+			always_unlocked="true"
+			craft_exp_gain="5"
+		>
+            <ingredient name="foodShamSandwich" count="1"/>
+			<effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="5"/>
+            </effect_group>
+            <craft_time time="5"/>
+            <item name="foodWhatABait"/>
+        </recipe>
+		<recipe
+			name="foodWhatABait"
+			count="1"
+			always_unlocked="true"
+			craft_exp_gain="5"
+		>
+            <ingredient name="foodRottingFlesh" count="1"/>
+			<effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="5"/>
+            </effect_group>
+            <craft_time time="5"/>
+            <item name="foodWhatABait"/>
+        </recipe>
+		<recipe
+			name="foodWhatABait"
+			count="1"
+			always_unlocked="true"
+			craft_exp_gain="5"
+		>
+            <ingredient name="foodCornMeal" count="1"/>
+			<effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="5"/>
+            </effect_group>
+            <craft_time time="5"/>
+            <item name="foodWhatABait"/>
+        </recipe>
+		
+		<!-- Наживка на удочке -->
+		<recipe
+			name="toolBadFishingRodWithBait"
+			count="1"
+			always_unlocked="true"
+			craft_exp_gain="5"
+		>
+            <ingredient name="foodWhatABait" count="1"/>
+            <ingredient name="toolBadFishingRod" count="1"/>
+			<effect_group>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="5"/>
+            </effect_group>
+            <craft_time time="5"/>
+            <item name="toolBadFishingRodWithBait"/>
+        </recipe>
+		
+		<!-- more fish!!! -->
+		<!-- Оладушки из рыбы -->
+		<recipe name="foodFishFritters" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingPot" 
+			tags="perkMasterChef,learnable" 
+			craft_time="15"
+		>
+			<ingredient name="foodWhatAFishRaw" count="3"/>
+			<ingredient name="foodCornMeal" count="4"/>
+			<ingredient name="foodEgg" count="2"/>
+			<item name="foodFishFritters"/>
+		</recipe>
+		<!-- Рыба с юккой -->
+		<recipe name="foodFriedFishWithYucca" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingGrill" 
+			tags="perkMasterChef,learnable" 
+			craft_time="20" 
+		>
+			<ingredient name="foodWhatAFishRaw" count="4"/>
+			<ingredient name="foodCropYuccaFruit" count="3"/>
+			<item name="foodFriedFishWithYucca"/>
+		</recipe>
+
+		<!-- Рыбно-грибной суп -->
+		<recipe name="foodFishMushroomSoup" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingPot" 
+			tags="perkMasterChef,learnable" 
+			craft_time="25" 
+		>
+			<ingredient name="foodWhatAFishRaw" count="4"/>
+			<ingredient name="foodCropMushrooms" count="5"/>
+			<ingredient name="drinkJarBoiledWater" count="2"/>
+			<item name="foodFishMushroomSoup"/>
+		</recipe>
+		<!-- Сэндвич с рыбой -->
+		<recipe name="foodFishSandwich" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingPot" 
+			tags="perkMasterChef,learnable" 
+			craft_time="20" 
+		>
+			<ingredient name="foodWhatAFishSmoked" count="4"/>
+			<ingredient name="foodCornBread" count="1"/>
+			<item name="foodFishSandwich"/>
+		</recipe>
+
+		<!-- Пирог из картохи и рыбы -->
+		<recipe name="foodFishPotatoPie" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingPot" 
+			tags="perkMasterChef,learnable"  
+			craft_time="30"
+		>
+			<ingredient name="foodWhatAFishRaw" count="5"/>
+			<ingredient name="foodCropPotato" count="4"/>
+			<ingredient name="foodEgg" count="2"/>
+			<ingredient name="foodCornMeal" count="4"/>
+			<item name="foodFishPotatoPie"/>
+		</recipe>
+		<!-- Копчёная рыба в соусе -->
+		<recipe name="foodSmokedFishInSauce" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingPot" 
+			tags="perkMasterChef,learnable" 
+			craft_time="25" 
+		>
+			<ingredient name="foodWhatAFishSmoked" count="4"/>
+			<ingredient name="foodCanChili" count="2"/>
+			<item name="foodSmokedFishInSauce"/>
+		</recipe>
+
+		<!-- Запечёная с картохой рыба -->
+		<recipe name="foodBakedFishAndPotatoes" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingPot" 
+			tags="perkMasterChef,learnable" 
+			craft_time="35"
+		>
+			<ingredient name="foodWhatAFishRaw" count="5"/>
+			<ingredient name="foodCropPotato" count="5"/>
+			<ingredient name="drinkJarGoldenRodTea" count="3"/>
+			<item name="foodBakedFishAndPotatoes"/>
+		</recipe>
+		<!-- Рыбно-кукурузная похлёбка -->
+		<recipe name="foodFishStewWithCorn" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingPot" 
+			tags="perkMasterChef,learnable" 
+			craft_time="30"
+		>
+			<ingredient name="foodWhatAFishSmoked" count="5"/>
+			<ingredient name="foodCropCorn" count="6"/>
+			<ingredient name="drinkJarBoiledWater" count="3"/>
+			<item name="foodFishStewWithCorn"/>
+		</recipe>
+
+		<!-- Тушёная рыбка -->
+		<recipe name="foodFishBraisedInOwnJuices" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingPot" 
+			tags="perkMasterChef,learnable" 
+			craft_time="40"
+		>
+			<ingredient name="foodWhatAFishRaw" count="6"/>
+			<ingredient name="drinkJarGoldenRodTea" count="4"/>
+			<ingredient name="foodCropYuccaFruit" count="4"/>
+			<item name="foodFishBraisedInOwnJuices"/>
+		</recipe>
+		<!-- Супертако рыбное -->
+		<recipe name="foodFishTacosDeluxe" 
+			count="1" 
+			craft_area="campfire" 
+			craft_tool="toolCookingPot" 
+			tags="perkMasterChef,learnable" 
+			craft_time="45" 
+		>
+			<ingredient name="foodWhatAFishSmoked" count="5"/>
+			<ingredient name="foodCropCorn" count="2"/>
+			<ingredient name="foodCropYuccaFruit" count="3"/>
+			<ingredient name="foodCornMeal" count="1"/>
+			<ingredient name="foodCanChili" count="3"/>
+			<item name="foodFishTacosDeluxe"/>
+		</recipe>
+        
+    </append>
+</configs>
