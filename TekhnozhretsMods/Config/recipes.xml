@@ -181,9 +181,6 @@
 			craft_exp_gain="5"
 		>
             <ingredient name="foodShamSandwich" count="1"/>
-			<effect_group>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="5"/>
-            </effect_group>
             <craft_time time="5"/>
             <item name="foodWhatABait"/>
         </recipe>
@@ -194,9 +191,6 @@
 			craft_exp_gain="5"
 		>
             <ingredient name="foodRottingFlesh" count="1"/>
-			<effect_group>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="5"/>
-            </effect_group>
             <craft_time time="5"/>
             <item name="foodWhatABait"/>
         </recipe>
@@ -207,9 +201,6 @@
 			craft_exp_gain="5"
 		>
             <ingredient name="foodCornMeal" count="1"/>
-			<effect_group>
-                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="craftingTime" operation="set" value="5"/>
-            </effect_group>
             <craft_time time="5"/>
             <item name="foodWhatABait"/>
         </recipe>
