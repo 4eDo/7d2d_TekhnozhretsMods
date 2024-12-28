@@ -119,19 +119,17 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="add" value="20"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="@$medicRegHealthIncreaseSpeed"/>
 				<display_value name="foodHealthAmount" value="20"/>
-				
 
 				<!-- pure water buff -->
 				<display_value name="dStaminaRegen" value=".1"/>
 				<display_value name="dEfficientDigestion" value=".1"/>
+				<display_value name="dHypothermalResist" value="20"/>
 				<display_value name="dDuration" value="360"/>
-
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="add" value="363"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="set" value="1083">
-					<requirement name="CVarCompare" cvar="$buffRedTeaDuration" operation="GT" value="1083"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="add" value="363"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="set" value="1083">
+					<requirement name="CVarCompare" cvar="$buffCoffeeBSDuration" operation="GT" value="1083"/>
 				</triggered_effect>
-				
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffRedTea"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffBlackStrapCoffee"/>
 				
 				<display_value name="dCureDysentery" value=".2"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDysenteryAddCurePerc" operation="add" value="20"/>
@@ -232,7 +230,7 @@
 				<property name="Delay" value="1.0"/>
 				<property name="Sound_start" value="player_eating"/>
 			</property>
-			<property name="CraftingIngredientTime" value="95"/>
+			<property name="CraftingIngredientTime" value="5"/>
 			<effect_group tiered="false" name="Food Tier 0">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-3"/>
